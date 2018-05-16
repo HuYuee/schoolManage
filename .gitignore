@@ -63,8 +63,6 @@ typings/
 # vscode config folder
 .vscode
 
-# dev
-dev/
-
 # dist
 dist/
+dev/

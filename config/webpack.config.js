@@ -32,6 +32,7 @@ module.exports = {
         "alias": {
             "src": path.resolve(ROOT, 'src'),
             "components": path.resolve(ROOT, 'src/components'),
+            "routes": path.resolve(ROOT, 'src/routes'),
             "containers": path.resolve(ROOT, 'src/containers'),
             "assets": path.resolve(ROOT, 'src/assets'),
             "routers": path.resolve(ROOT, 'src/routers')

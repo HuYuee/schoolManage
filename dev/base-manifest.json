@@ -1,17 +1,1 @@
-{
-    "name": "base",
-    "content": {
-        "./node_modules/lodash/lodash.js": {
-            "id": 13,
-            "meta": {}
-        },
-        "./node_modules/webpack/buildin/global.js": {
-            "id": 14,
-            "meta": {}
-        },
-        "./node_modules/webpack/buildin/module.js": {
-            "id": 15,
-            "meta": {}
-        }
-    }
-}
+{"name":"base","content":{"./node_modules/lodash/lodash.js":{"id":13,"meta":{}},"./node_modules/webpack/buildin/global.js":{"id":14,"meta":{}},"./node_modules/webpack/buildin/module.js":{"id":15,"meta":{}}}}
