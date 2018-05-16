@@ -1,0 +1,46 @@
+{
+    "name": "easy-pack",
+    "version": "1.0.0",
+    "description": "每个人心中都有一套属于自己的工程构建/滑稽脸",
+    "scripts": {
+        "start": "node bin/server",
+        "build_pack": "node bin/build",
+        "clean": "rm -rf ./dist/*",
+        "build": "npm run clean && npm run build_dll && npm run build_pack",
+        "dll": "cross-env NODE_ENV=development webpack --progress -d --hide-modules --config ./config/webpack.dll.js",
+        "build_dll": "cross-env NODE_ENV=production webpack --sort-assets-by 'size' --progress -p --hide-modules --config ./config/webpack.dll.js"
+    },
+    "author": "onvno (https://github.com/onvno)",
+    "devDependencies": {
+        "webpack": "^3.11.0",
+        "webpack-dev-middleware": "^2.0.6",
+        "webpack-dev-server": "^2.11.2",
+        "webpack-hot-middleware": "^2.22.1",
+        "webpack-merge": "^4.1.2",
+        "cross-env": "^5.1.4",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "react": "*",
+        "react-dom": "*",
+        "prop-types": "*",
+        "less": "^3.0.1",
+        "less-loader": "^4.1.0",
+        "style-loader": "^0.20.3",
+        "css-loader": "^0.28.11",
+        "file-loader": "^1.1.11",
+        "url-loader": "^1.0.1",
+        "open-browser-webpack-plugin": "0.0.5",
+        "html-webpack-plugin": "^3.2.0",
+        "add-asset-html-webpack-plugin": "^2.1.3"
+    },
+    "dependencies": {
+        "lodash": "*",
+        "react": "*",
+        "react-dom": "*"
+    }
+}
