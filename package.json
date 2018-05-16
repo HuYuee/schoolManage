@@ -6,7 +6,7 @@
         "start": "node bin/server",
         "build_pack": "node bin/build",
         "clean": "rm -rf ./dist/*",
-        "build": "npm run clean && npm run build_dll && npm run build_pack",
+        "build": "npm run build_dll && npm run build_pack",
         "dll": "cross-env NODE_ENV=development webpack --progress -d --hide-modules --config ./config/webpack.dll.js",
         "build_dll": "cross-env NODE_ENV=production webpack --sort-assets-by 'size' --progress -p --hide-modules --config ./config/webpack.dll.js"
     },
