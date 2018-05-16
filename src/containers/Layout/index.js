@@ -1,6 +1,8 @@
+import React from "react";
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Link } from "react-router-dom";
 const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Header, Content, Sider, Footer } = Layout;
 import './index.less'
 
 const HtmlLayout = (props)=>{
@@ -8,7 +10,7 @@ const HtmlLayout = (props)=>{
         <Layout>
             <Header className="header">
             <div className="logo" />
-            <Menu
+            {/* <Menu
                 theme="dark"
                 mode="horizontal"
                 defaultSelectedKeys={['2']}
@@ -17,7 +19,7 @@ const HtmlLayout = (props)=>{
                 <Menu.Item key="1">nav 1</Menu.Item>
                 <Menu.Item key="2">nav 2</Menu.Item>
                 <Menu.Item key="3">nav 3</Menu.Item>
-            </Menu>
+            </Menu> */}
             </Header>
             <Layout>
             <Sider width={200} style={{ background: '#fff' }}>
@@ -27,9 +29,10 @@ const HtmlLayout = (props)=>{
                 defaultOpenKeys={['sub1']}
                 style={{ height: '100%', borderRight: 0 }}
                 >
+                <Menu.Item key="0"><Link to="/"><span><Icon type="user" />Home</span></Link></Menu.Item>
                 <SubMenu key="sub1" title={<span><Icon type="user" />subnav 1</span>}>
-                    <Menu.Item key="1">option1</Menu.Item>
-                    <Menu.Item key="2">option2</Menu.Item>
+                    <Menu.Item key="1"><Link to="/about">About</Link></Menu.Item>
+                    <Menu.Item key="2"><Link to="/topics">Topics</Link></Menu.Item>
                     <Menu.Item key="3">option3</Menu.Item>
                     <Menu.Item key="4">option4</Menu.Item>
                 </SubMenu>
@@ -47,17 +50,20 @@ const HtmlLayout = (props)=>{
                 </SubMenu>
                 </Menu>
             </Sider>
-            <Layout style={{ padding: '0 24px 24px' }}>
-                <Breadcrumb style={{ margin: '16px 0' }}>
+            <Layout style={{ padding: '24px 24px 0 24px' }}>
+                {/* <Breadcrumb style={{ margin: '16px 0' }}>
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>List</Breadcrumb.Item>
                 <Breadcrumb.Item>App</Breadcrumb.Item>
-                </Breadcrumb>
-                <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 }}>
+                </Breadcrumb> */}
+                <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 ,width:"100%"}}>
                     {props.children?props.children:Content}
                 </Content>
             </Layout>
             </Layout>
+            <Footer style={{ textAlign: 'center' }}>
+            Ant Design ©2016 Created by Ant UED
+            </Footer>
         </Layout>
     )
 }

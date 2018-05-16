@@ -40,8 +40,10 @@
         "webpack-merge": "^4.1.2"
     },
     "dependencies": {
+        "@antv/data-set": "^0.8.9",
         "antd": "^3.5.2",
         "axios": "^0.18.0",
+        "bizcharts": "^3.1.7",
         "lodash": "*",
         "react": "*",
         "react-dom": "*",

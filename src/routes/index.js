@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Content from 'components/layout/index'
+import Content from 'containers/Layout'
+import Home from 'containers/Home'
 
 const BasicExample = () => (
   <Router>
@@ -11,11 +12,7 @@ const BasicExample = () => (
     </Content>
   </Router>
 );
-const Home = () => (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
+
   
   const About = () => (
     <div>
