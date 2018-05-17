@@ -56,7 +56,7 @@ const HtmlLayout = (props)=>{
                 <Breadcrumb.Item>List</Breadcrumb.Item>
                 <Breadcrumb.Item>App</Breadcrumb.Item>
                 </Breadcrumb> */}
-                <Content style={{ background: '#fff', padding: 24, margin: 0, minHeight: 280 ,width:"100%"}}>
+                <Content style={{ padding: 24, margin: 0, minHeight: 280 ,width:"100%"}}>
                     {props.children?props.children:Content}
                 </Content>
             </Layout>

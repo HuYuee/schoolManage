@@ -1,7 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";//等到线上环境更换为BrowserRouter
 import Content from 'containers/Layout'
 import Home from 'containers/Home'
+import About from 'containers/About'
 
 const BasicExample = () => (
   <Router>
@@ -12,13 +13,6 @@ const BasicExample = () => (
     </Content>
   </Router>
 );
-
-  
-  const About = () => (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
   
   const Topics = ({ match }) => (
     <div>
