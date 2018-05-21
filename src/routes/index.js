@@ -1,47 +1,17 @@
 import React from "react";
 import { HashRouter as Router, Route, Link } from "react-router-dom";//等到线上环境更换为BrowserRouter
-import Content from 'containers/Layout'
+import Layout from 'containers/Layout'
 import Home from 'containers/Home'
 import About from 'containers/About'
+import Topics from 'containers/Topics'
 
 const BasicExample = () => (
   <Router>
-    <Content>
+    <Layout>
         <Route exact path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/topics" component={Topics} />
-    </Content>
+    </Layout>
   </Router>
 );
-  
-  const Topics = ({ match }) => (
-    <div>
-      <h2>Topics</h2>
-      <ul>
-        <li>
-          <Link to={`${match.url}/rendering`}>Rendering with React</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/components`}>Components</Link>
-        </li>
-        <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
-        </li>
-      </ul>
-  
-      <Route path={`${match.url}/:topicId`} component={Topic} />
-      <Route
-        exact
-        path={match.url}
-        render={() => <h3>Please select a topic.</h3>}
-      />
-    </div>
-  );
-  
-  const Topic = ({ match }) => (
-    <div>
-      <h3>{match.params.topicId}</h3>
-    </div>
-  );
-  
   export default BasicExample;

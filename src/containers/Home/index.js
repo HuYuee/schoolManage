@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Mychart from 'components/Mychart';
+import MyChart from 'components/MyChart';
 import { Card, Col, Row } from 'antd';
 import TitleSplit from 'components/TitleSplit';
 import './index.less'
@@ -26,7 +26,7 @@ export default class Home extends Component{
               </div>
               <div className="home_content">
                 <TitleSplit>经营趋势图</TitleSplit>
-                <Mychart/>
+                <MyChart/>
               </div>
             </div>
         )
